@@ -24,15 +24,17 @@ module.exports = {
   },
 
   output: {
-    filename: 'game.bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
 
   mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    writeToDisk: true,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: false,
     open: true,
   },
 
@@ -56,11 +58,12 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        commons: {
+        defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+          name: 'modules',
+          reuseExistingChunk: true,
+          filename: '[name].bundle.js',
           chunks: 'all',
-          filename: '[name].game.bundle.js',
         },
       },
     },
