@@ -2,6 +2,10 @@
   "name": "coa-devops",
   "version": "0.1.0",
   "main": "src/main.ts",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
@@ -11,8 +15,8 @@
     "phaser": "^3.55.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "3.10.1",
-    "@typescript-eslint/parser": "3.10.1",
+    "@typescript-eslint/eslint-plugin": "4.32.0",
+    "@typescript-eslint/parser": "4.32.0",
     "copy-webpack-plugin": "9.0.1",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
