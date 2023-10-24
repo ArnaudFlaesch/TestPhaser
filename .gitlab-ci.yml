@@ -1,4 +1,4 @@
-image: node:20.8.1
+image: node:21.0.0
 
 cache:
   paths:
