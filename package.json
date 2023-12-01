@@ -22,7 +22,7 @@
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-prettier": "5.0.1",
     "prettier": "3.0.3",
-    "ts-loader": "9.5.0",
+    "ts-loader": "9.5.1",
     "typescript": "5.2.2",
     "typescript-tslint-plugin": "1.0.2",
     "webpack": "5.89.0",
